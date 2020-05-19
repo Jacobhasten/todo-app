@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  border: 1px solid blue;
+  border-radius: .2rem;
+  padding: .3rem;
+  color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page-wrapper {
   display: flex;
-  flex-direction: column;
+}
+
+.plus-icon {
+  font-size: 1rem;
+}
+.sidebar-wrapper {
+  border-right: 2px solid lightgray;
+  width: 15%;
+  height: 100vh;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+}
+.sidebar__profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 2px solid lightgray;
+  width: 95%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.sidebar__profile-avatar-img {
+  width: 7rem;
+  padding-bottom: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar__add-new-task {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar__categories__header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.sidebar__categories__title-icon {
+  display: flex;
+  align-items: center;
+  
+}
+
+.categories-icon {
+  margin-right: .5rem;
+  width: 100%;
+}
+.sidebar__categories__folders {
+  
+  width: 100%;
+}
+.sidebar__categories__folders-each {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: .5rem 1rem .5rem 1rem;  
+  border: 2px solid lightgray;
+}
+.sidebar__categories__folders-each-amount-tasks{
+ font-size: .8rem;
+ padding-right: 1rem;
+}
+.sidebar__categories__folders-each-title {
+ 
+}
+
+.fahome {
+  position: relative;
+  right: 5px;
+}
+
+.body-wrapper {
+  width: 85%;
+}
+.body__date-organizer{
+  padding-top: 5rem;
+  padding-left: 5rem;
+}
+.body__date-organizer-each {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.body__date-organizer-each-title {
+  padding-right: 2rem;
+}
+
+.task-card {
+  border: 1px solid lightgray;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: .15fr .3fr 1fr .1fr .1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "check title description edit delete" 
+  "check category description edit delete" 
+  "check time description edit delete" ;
+}
+.task-card__checkbox {
+  grid-area: check;
+  justify-self: center;
+  align-self: center;
+}
+.task-card__title {
+  grid-area: title;
+
+}
+.task-card__category {
+  grid-area: category;
+  font-size: .8rem;
+}
+.task-card__time {
+  grid-area: time;
+  font-size: .8rem;
+}
+.task-card__description {
+  grid-area: description;
+  font-size: .8rem;
+  justify-self: center;
+  align-self: center;
+  width: 80%;
+}
+.task-card__edit {
+  grid-area: edit;
+  justify-self: center;
+  align-self: center;
+
+}
+.task-card__delete {
+  grid-area: delete;
+  justify-self: center;
+  align-self: center;
 }
