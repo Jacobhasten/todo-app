@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faFolder, faFolderOpen, faPen, faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faFolder, faFolderOpen, faPen, faTrash, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import avatar from "./avatar.jpg"
 
 function App() {
@@ -63,29 +63,67 @@ function App() {
       <div className="body-wrapper">
         <div className="body__date-organizer">
           <div className="body__date-organizer-each">
+          <div className="body__date-organizer__title-icon-wrapper">
             <h2 className="body__date-organizer-each-title">Today</h2>
-            <input type="checkbox"></input>
+            <FontAwesomeIcon icon={faChevronDown} className="categories-icon" />
+            </div>
           </div>
           <div className="body__date-organizer-each">
-
+          <div className="body__date-organizer__title-icon-wrapper">
             <h2 className="body__date-organizer-each-title">This Week</h2>
-            <input type="checkbox"></input>
+            <FontAwesomeIcon icon={faChevronUp} className="categories-icon" />
+            </div>
             <div className="task-card-wrapper">
               <div className="task-card">
-              <input className="task-card__checkbox" type="checkbox"></input>
-              <h5 className="task-card__title"> Pay electric bill</h5>
-              <p className="task-card__category">Finance</p>
-              <p className="task-card__time"> Tue 7:30pm</p>
-              <p className="task-card__description">Description: Lorem ipsum dolor sit amet, aeque fabellas euripidis nam ...</p>
-              <FontAwesomeIcon icon={faPen} className="categories-icon task-card__edit" />
-              <FontAwesomeIcon icon={faTrash} className="categories-icon task-card__delete" />
+                <input className="task-card__checkbox" type="checkbox"></input>
+                <h5 className="task-card__title"> Pay electric bill</h5>
+                <p className="task-card__category">Finance</p>
+                <p className="task-card__time"> Tue 7:30pm</p>
+                <p className="task-card__description">Description: Lorem ipsum dolor sit amet, aeque fabellas euripidis nam ...</p>
+                <FontAwesomeIcon icon={faPen} className="categories-icon task-card__edit" />
+                <FontAwesomeIcon icon={faTrash} className="categories-icon task-card__delete" />
+              </div>
+            </div>
+            <div className="task-card-wrapper">
+              <div className="task-card">
+                <input className="task-card__checkbox" type="checkbox"></input>
+                <h5 className="task-card__title">Laundry</h5>
+                <p className="task-card__category">Household</p>
+                <p className="task-card__time"> Tue 8:00pm</p>
+                <p className="task-card__description">Description: Lorem ipsum dolor sit amet, aeque fabellas euripidis nam ...</p>
+                <FontAwesomeIcon icon={faPen} className="categories-icon task-card__edit" />
+                <FontAwesomeIcon icon={faTrash} className="categories-icon task-card__delete" />
+              </div>
+            </div>
+            <div className="task-card-wrapper">
+              <div className="task-card">
+                <input className="task-card__checkbox" type="checkbox"></input>
+                <h5 className="task-card__title">Groceries</h5>
+                <p className="task-card__category">Household</p>
+                <p className="task-card__time">Wed 2:00pm</p>
+                <p className="task-card__description">Description: Lorem ipsum dolor sit amet, aeque fabellas euripidis nam ...</p>
+                <FontAwesomeIcon icon={faPen} className="categories-icon task-card__edit" />
+                <FontAwesomeIcon icon={faTrash} className="categories-icon task-card__delete" />
+              </div>
+            </div>
+            <div className="task-card-wrapper">
+              <div className="task-card">
+                <input className="task-card__checkbox" type="checkbox"></input>
+                <h5 className="task-card__title">Finish Work...</h5>
+                <p className="task-card__category">Work</p>
+                <p className="task-card__time"> Fri 1:00pm</p>
+                <p className="task-card__description">Description: Lorem ipsum dolor sit amet, aeque fabellas euripidis nam ...</p>
+                <FontAwesomeIcon icon={faPen} className="categories-icon task-card__edit" />
+                <FontAwesomeIcon icon={faTrash} className="categories-icon task-card__delete" />
               </div>
             </div>
           </div>
 
           <div className="body__date-organizer-each">
+          <div className="body__date-organizer__title-icon-wrapper">
             <h2 className="body__date-organizer-each-title">This Month</h2>
-            <input type="checkbox"></input>
+            <FontAwesomeIcon icon={faChevronDown} className="categories-icon" />
+            </div>
           </div>
         </div>
 
