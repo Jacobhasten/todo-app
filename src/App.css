@@ -102,6 +102,12 @@ a {
 }
 .body__date-organizer-each {
   display: flex;
+  Justify-items: center;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+.body__date-organizer__title-icon-wrapper {
+  display: flex;
   align-items: center;
   padding-bottom: 2rem;
 }
@@ -110,14 +116,17 @@ a {
   padding-right: 2rem;
 }
 
+.task-card-wrapper {
+  padding-bottom: 1rem;
+}
 .task-card {
   border: 1px solid lightgray;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  width: 100%;
+  width: 70%;
   display: grid;
   grid-template-columns: .15fr .3fr 1fr .1fr .1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1.3fr 1fr 1fr;
   grid-template-areas: "check title description edit delete" 
   "check category description edit delete" 
   "check time description edit delete" ;
