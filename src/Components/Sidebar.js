@@ -26,7 +26,7 @@ return(<div className="sidebar-wrapper">
               <FontAwesomeIcon icon={faFolder} className="categories-icon" />
               <h4 className="sidebar__categories__folders-each-title">Finance</h4>
             </div>
-            <p className="sidebar__categories__folders-each-amount-tasks">5 tasks</p>
+            <p className="sidebar__categories__folders-each-amount-tasks">6 tasks</p>
           </div>
           <div className="sidebar__categories__folders-each">
             <div className="sidebar__categories__title-icon">
