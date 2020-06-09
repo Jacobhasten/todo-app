@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Noto Sans HK', sans-serif;
 }
 
 li {
@@ -16,6 +17,38 @@ a {
   color: black;
 }
 
+button {
+  display: inline-block;
+  padding: 0.5em 1rem;
+  border: 0.16em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-weight: bold;
+  color: indigo;
+  text-align:center;
+  transition: all 0.15s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus
+{
+  display: inline-block;
+  color: rgb(112, 25, 175);
+  border-color:indigo;
+}
+
+button:active {
+  display: inline-block;
+  background-color: rgb(186, 133, 224);
+  border: none;
+}
+
+
+
 .page-wrapper {
   display: flex;
 }
@@ -24,12 +57,12 @@ a {
   font-size: 1rem;
 }
 .sidebar-wrapper {
-  border-right: 2px solid lightgray;
   width: 15%;
   height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
+  background: rgb(213, 185, 233);
 }
 .sidebar__profile {
   display: flex;
@@ -43,11 +76,22 @@ a {
 .sidebar__profile-avatar-img {
   width: 7rem;
   padding-bottom: 0.5rem;
+  border-radius: 5rem;
 }
 
 .sidebar__add-new-task {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   padding-top: 2rem;
   padding-bottom: 5rem;
+}
+
+.sidebar__add-new-task__form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
 }
 
 .sidebar__categories__header {
@@ -67,6 +111,7 @@ a {
 .categories-icon {
   margin-right: .5rem;
   width: 100%;
+  color: indigo;
 }
 .sidebar__categories__folders {
   
@@ -78,7 +123,7 @@ a {
   align-items: center;
   width: 100%;
   padding: .5rem 1rem .5rem 1rem;  
-  border: 2px solid lightgray;
+  border: .5px solid indigo;
 }
 .sidebar__categories__folders-each-amount-tasks{
  font-size: .8rem;
@@ -123,9 +168,9 @@ a {
   border: 1px solid lightgray;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  width: 70%;
+  width: 600px;
   display: grid;
-  grid-template-columns: .15fr .3fr 1fr .1fr .1fr;
+  grid-template-columns: .15fr .3fr 1fr .15fr .15fr;
   grid-template-rows: 1.3fr 1fr 1fr;
   grid-template-areas: "check title description edit delete" 
   "check category description edit delete" 
@@ -159,7 +204,7 @@ a {
   grid-area: edit;
   justify-self: center;
   align-self: center;
-
+  
 }
 .task-card__delete {
   grid-area: delete;
